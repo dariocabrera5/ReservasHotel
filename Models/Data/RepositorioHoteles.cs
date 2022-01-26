@@ -20,9 +20,9 @@ namespace Docs.Models.Data
 
         Hoteles IRepositorioHoteles.AddHotel (Hoteles Hotel)
         {
-            var ArbitroAñadido = _appContext.hoteles.Add(Hotel);
+            var HotelAñadido = _appContext.hoteles.Add(Hotel);
             _appContext.SaveChanges();
-            return ArbitroAñadido.Entity;
+            return HotelAñadido.Entity;
         }
         void IRepositorioHoteles.DeleteHotel (int Hotelid)
         {
